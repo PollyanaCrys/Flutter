@@ -1,0 +1,32 @@
+class InfoCatalogo {
+  final String imagem;
+  final String titulo;
+  final String descricao;
+  final String quantidade;
+  final int valor;
+    
+  InfoCatalogo({
+    required this.imagem,
+    required this.titulo,
+    required this.descricao,
+    required this.quantidade,
+    required this.valor,
+      });
+}
+   
+class _CataloState extends State<Catalogo> {
+ InfoCatalogo  produto1 = InfoCatalogo(
+    imagem: 'https://img.freepik.com/fotos-gratis/xicara-de-cafe-com-espuma-cara-de-sorriso-na-mesa-isolada_1303-18307.jpg?w=2000',
+    titulo: 'Café',
+    descricao: produto feito a base de café moido e torrado da marca....,
+    quantidade:80ml,
+    valor:8,00,
+  );
+
+ InfoCatalogo  produto2 = InfoCatalogo(
+    imagem: ',
+    titulo: '',
+    descricao: ,
+    quantidade:,
+    valor:,
+  );
