@@ -9,7 +9,7 @@ void main() => runApp(MaterialApp());
      titulo: 'Café',
      descricao: 'produto feito a base de cafe moido e torrado da marca....',
      quantidade:'80ml',
-     valor:8.00
+     valor:7.99
    );
 
  InfoCatalogo  produto2 = InfoCatalogo(
