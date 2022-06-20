@@ -1,54 +1,42 @@
 import 'package:flutter/material.dart';
-import '/infoProdutos.dart';
+import '/infoCatalogo.dart';
 
 class DetalhesCatalogo extends StatefulWidget {
-  final catalogo infoProdutos;
+  final  InfoCatalogo infoProdutos;
 
-const DetalhesCatalogo ({Key? key, required this.catalogoTuristico})
+const DetalhesCatalogo ({Key? key, required this.infoCatalogo})
       : super(key: key);
 
 
-    override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: buildBody(),
-    );
-  }
+  @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: buildBody(),
+      );
+    }
 
-  buildBody() {
-    return ListView(
-      children: [
-        Image.network(catalogo.imagem),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                catalogo.titulo,
-              ),
-              const SizedBox(height: 8),
-              buildText(text: catalogo.titulo, fontSize: 21, isBold: true),
-              const SizedBox(height: 8),
-              buildText(text: catalogo.valor),
-              const SizedBox(height: 8),
-              buildText(text: '${catalogo.quantidade}'),
-              const SizedBox(height: 8),
-
-              Row(
-                children: [
-                  Expanded(
-                    child: buildText(
-                      text: catalogo.descricao,
-                      fontSize: 21,
-                      isBold: true,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+    buildBody() {
+      return ListView(
+        children: [
+          Image.network(infoProdutos.imagem),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  infoProdutos.titulo,
+                ),
+                const SizedBox(height: 8),
+                buildText(text:infoProdutos.titulo, fontSize: 21, isBold: true),
+                const SizedBox(height: 8),
+                buildText(text: infoProdutos.valor),
+                const SizedBox(height: 8),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
-    );
-  }
+        ];
+      );
+    } 
